@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+ 
 const Cardone = ({ item, handleClick, id }) => {
   const { title, price } = item;
   console.log(id);

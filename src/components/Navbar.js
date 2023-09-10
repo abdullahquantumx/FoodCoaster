@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom"
 import styled from 'styled-components'
+import { CgProfile } from 'react-icons/cg'
+
+
 
 const Navbar = () => {
     return (
@@ -23,11 +26,9 @@ const Navbar = () => {
                                 <Link className="nav-link active" aria-current="page" to="/contact">Contact Us</Link>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                        
+                        <logo>
+                        <Link className="nav-link logo" aria-current="page" to="/login/SignIn.js"><CgProfile/></Link>
+                        </logo>
                     </div>
                 </div>
             </nav>
@@ -39,6 +40,18 @@ const Navbar = () => {
 export default Navbar
 const Container = styled.div`
 
+.logo{
+    background:none;
+    font-size: 1.96rem;
+    text-align: center;
+    /* padding-bottom: px; */
+    margin:-28px 14px;
+    color: green;
+    transition: all 0.09s ease-in-out 0.09s;
+}
+.logo:hover{
+    font-size: 2.2rem;  
+}
 .nav-link{
     transition: all 0.1s all ease-in-out 0.1s;
 }

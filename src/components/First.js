@@ -12,28 +12,35 @@ import Hexagon from './Restaurants/Hexagon';
 import LT6 from './Restaurants/LT6';
 import Rankol from './Restaurants/Rankol';
 import AgainEat from './Restaurants/AgainEat';
+import SignUp from './login/SignUp';
+import Register from './login/Register';
+
+
 
 
 const First = () => {
-    return (
-      <>
-      <Router>
-        <Navbar/>
-          <Routes>
-           <Route exact path='/' element={<Home/>} />
-           <Route exact path='/About' element={<About/>} />
-           <Route exact path='/Contact' element={<Contact/>} />
-           <Route exact path='/Restaurant' element={<Restaurant/>} />
-           <Route exact path='/Restaurants/DosaPlaza.js' element={<DosaPlaza/>} />
-           <Route exact path='/Restaurants/Calorie.js' element={<Calorie/>} />
-           <Route exact path='/Restaurants/Hexagon.js' element={<Hexagon/>} />
-           <Route exact path='/Restaurants/LT6.js' element={<LT6/>} />
-           <Route exact path='/Restaurants/Rankol.js' element={<Rankol/>} />
-           <Route exact path='/Restaurants/AgainEat.js' element={<AgainEat/>} />
-          </Routes>
-      </Router>
-      </>
-    )
-  }
-  
-  export default First
+  return (
+    <>
+    <Router>
+      <Navbar/>
+        <Routes>
+         <Route exact path='/' element={<Home/>} />
+         <Route exact path='/About' element={<About/>} />
+         <Route exact path='/Contact' element={<Contact/>} />
+         <Route exact path='/Restaurant' element={<Restaurant/>} />
+         <Route exact path='/login/SignIn.js' element={<SignUp/>} />
+         <Route exact path='/login/Register.js' element={<Register/>} />
+         <Route exact path='/Restaurants/DosaPlaza.js' element={<DosaPlaza/>} />
+         <Route exact path='/Restaurants/Calorie.js' element={<Calorie/>} />
+         <Route exact path='/Restaurants/Hexagon.js' element={<Hexagon/>} />
+         <Route exact path='/Restaurants/LT6.js' element={<LT6/>} />
+         <Route exact path='/Restaurants/Rankol.js' element={<Rankol/>} />
+         <Route exact path='/Restaurants/AgainEat.js' element={<AgainEat/>} />
+        
+        </Routes>
+    </Router>
+    </>
+  )
+}
+
+export default First
