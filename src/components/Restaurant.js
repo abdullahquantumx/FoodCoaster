@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
+import { useLocation } from 'react-router-dom'
 const Restaurant = () => {
+    const location = useLocation();
+    const id = new URLSearchParams(location.search).get("id");
+    console.log(id);
     return (
         <>
             <Container>
@@ -13,7 +17,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">Calorie</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/Calorie.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/Calorie.js?id=${id}`} className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                     <div className="card" style={{ width: 18 + 'rem' }}>
@@ -21,7 +25,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">DosaPlaza</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/DosaPlaza.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/DosaPlaza.js?id=${id}`} className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                     <div className="card" style={{ width: 18 + 'rem' }}>
@@ -29,7 +33,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">AgainEat</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/AgainEat.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/AgainEat.js?id=${id}`}  className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                     <div className="card" style={{ width: 18 + 'rem' }}>
@@ -37,7 +41,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">Hexagon</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/Hexagon.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/Hexagon.js?id=${id}`}  className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                     <div className="card" style={{ width: 18 + 'rem' }}>
@@ -45,7 +49,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">Rankol</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/Rankol.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/Rankol.js?id=${id}`}  className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                     <div className="card" style={{ width: 18 + 'rem' }}>
@@ -53,7 +57,7 @@ const Restaurant = () => {
                         <div className="card-body text-center">
                             <h5 className="card-title">LT-6</h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <Link to="/Restaurants/LT6.js" className="btn btn-success">Try Me</Link>
+                            <Link to={`/Restaurants/LT6.js?id=${id}`}  className="btn btn-success">Try Me</Link>
                         </div>
                     </div>
                 </cards>

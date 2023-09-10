@@ -69,6 +69,7 @@ const Cartone = ({ cart, setCart }) => {
             title: item.title,
             price: item.price,
             amount: item.amount,
+            total: price
           };
         });
       

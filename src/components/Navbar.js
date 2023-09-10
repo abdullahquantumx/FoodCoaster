@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom"
 import styled from 'styled-components'
-import { CgProfile } from 'react-icons/cg'
+// import { CgProfile } from 'react-icons/cg'
+const firebaseConfig = {
+    // Your Firebase config
+    apiKey: "AIzaSyBTdUS2krzmWEHO_lok6Ej48MVD3v-nKa4",
+    authDomain: "foodcoaster-770a4.firebaseapp.com",
+    projectId: "foodcoaster-770a4",
+    storageBucket: "foodcoaster-770a4.appspot.com",
+    messagingSenderId: "370519028100",
+    appId: "1:370519028100:web:17c8697c67597a85102dd1"
+  };
+
 
 
 
 const Navbar = () => {
+    const logOut=()=>{
+        firebaseConfig.auth().signOut();
+      };
     return (
         <>
         <Container>
@@ -27,7 +40,10 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <logo>
-                        <Link className="nav-link logo" aria-current="page" to="/login/SignIn.js"><CgProfile/></Link>
+                        <Link className="nav-link logo" aria-current="page" to="/login/SignIn.js">LogIn</Link>
+                        </logo>
+                        <logo>
+                        <Link className="nav-link logo" aria-current="page" to="/login/SignIn.js" onClick={logOut}>LogOut</Link>
                         </logo>
                     </div>
                 </div>
@@ -42,7 +58,7 @@ const Container = styled.div`
 
 .logo{
     background:none;
-    font-size: 1.96rem;
+    font-size: 1.76rem;
     text-align: center;
     /* padding-bottom: px; */
     margin:-28px 14px;
@@ -50,7 +66,7 @@ const Container = styled.div`
     transition: all 0.09s ease-in-out 0.09s;
 }
 .logo:hover{
-    font-size: 2.2rem;  
+    font-size: 1.8rem;  
 }
 .nav-link{
     transition: all 0.1s all ease-in-out 0.1s;
